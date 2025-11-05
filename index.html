@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>푸른 씨앗 재단 | 우리의 작은 실천이, 지구의 내일을 바꿉니다</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS 스타일링 (모바일 최적화) */
+        :root {
+            --main-color: #2ECC71; /* 생동감 있는 초록 */
+            --sub-color: #3498DB; /* 희망적인 파랑 */
+            --bg-color: #ECF0F1; /* 밝은 배경 */
+            --font-color: #2C3E50;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--font-color);
+            line-height: 1.6;
+        }
+
+        /* ------------------ 헤더/네비게이션 ------------------ */
+        header {
+            background-color: white;
+            padding: 15px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            color: var(--main-color);
+            font-size: 1.4em;
+            font-weight: 700;
+        }
+        
+        /* '손과 새싹' 아이콘 대체 - 실제로는 이미지 파일이나 SVG를 사용해야 합니다. */
+        .logo span {
+            display: inline-block;
+            margin-right: 5px;
+            color: var(--main-color);
+            font-size: 1.5em; 
+        }
+
+        .nav-toggle {
+            font-size: 1.8em;
+            cursor: pointer;
+            color: var(--font-color);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: none; /* 초기에는 숨김 (모바일 햄버거 메뉴) */
+            position: absolute;
+            top: 55px;
+            right: 0;
+            background-color: white;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 10px 0;
+        }
+
+        nav ul.open {
+            display: block;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--font-color);
+            display: block;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: var(--bg-color);
+            color: var(--main-color);
+        }
+
+        /* ------------------ 메인 배너/슬로건 ------------------ */
+        #hero {
+            background-color: var(--main-color);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        #hero h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        #hero p {
+            font-size: 1.1em;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--sub-color);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #2980B9;
+        }
+
+        /* ------------------ 핵심 활동 섹션 ------------------ */
+        section {
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        h3 {
+            color: var(--main-color);
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 5px;
+        }
+
+        .challenge-box {
+            background-color: var(--bg-color);
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+
+        .challenge-box h4 {
+            color: var(--sub-color);
+            margin-bottom: 5px;
+        }
+
+        /* ------------------ Footer ------------------ */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8em;
+            color: #7F8C8D;
+            background-color: #34495E;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <span>🌿</span><h1>푸른 씨앗 재단</h1>
+        </div>
+        <div class="nav-toggle" onclick="toggleMenu()">&#9776;</div> <nav id="main-nav">
+            <ul>
+                <li><a href="#about">재단 소개</a></li>
+                <li><a href="#challenge">챌린지 참여</a></li>
+                <li><a href="#news">소식/갤러리</a></li>
+                <li><a href="#contact">문의/후원</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>환경을 위한 청소년의 발자국</h2>
+        <p>"우리의 작은 실천이, 지구의 내일을 바꿉니다."</p>
+        <a href="#challenge" class="cta-button">💚 챌린지 바로 참여하기</a>
+    </section>
+
+    <section id="about">
+        <h3>🌱 푸른 씨앗 재단은?</h3>
+        <p>고등학생들이 주축이 되어 탄소 중립 사회를 앞당기기 위해 설립된 비영리 환경 재단입니다. 청소년의 에너지와 아이디어를 모아 지역 사회의 변화를 이끌어냅니다.</p>
+        <div class="challenge-box">
+            <h4>우리의 미션</h4>
+            <p>**탄소 발자국 줄이기 실천**을 핵심 활동으로, 일상 속 작은 습관 변화를 유도하는 캠페인을 지속적으로 펼칩니다.</p>
+        </div>
+    </section>
+
+    <section id="challenge">
+        <h3>👣 탄소 발자국 줄이기 챌린지</h3>
+        <p>매월 새로운 주제로 환경 실천 미션을 부여하고, 참여자들의 인증과 기록을 공유하는 캠페인입니다.</p>
+
+        <div class="challenge-box">
+            <h4>이번 달의 챌린지: '에코 라이딩'</h4>
+            <p>✅ 미션: 자전거/대중교통 이용 인증샷 올리기</p>
+            <p>✅ 목표: 하루 1회 이상 대중교통/자전거 이용으로 탄소 배출량 줄이기!</p>
+        </div>
+
+        <div class="challenge-box" style="margin-top: 10px;">
+            <h4>지난 챌린지 결과</h4>
+            <p>2월 '용기내 챌린지' 참여율 85% 달성! 총 **500kg**의 플라스틱 사용 절감 효과!</p>
+        </div>
+        <a href="#" class="cta-button" style="margin-top: 15px;">챌린지 참여 가이드 보기</a>
+    </section>
+
+    <section id="news">
+        <h3>📢 소식 & 갤러리</h3>
+        <p>재단의 활동 기록, 참여 학생들의 후기, 그리고 환경 관련 최신 뉴스를 확인하세요.</p>
+        <ul>
+            <li>[공지] 3월 환경 교육 멘토 모집 안내</li>
+            <li>[갤러리] 게릴라 가드닝 프로젝트 성공 사진</li>
+            <li>[뉴스] 지역 탄소 중립 정책 제안 결과</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2025 푸른 씨앗 재단. All Rights Reserved.</p>
+        <p>고등학생 비영리 재단</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('main-nav');
+            const ul = nav.querySelector('ul');
+            ul.classList.toggle('open');
+        }
+        
+        // 메뉴 항목 클릭 시 메뉴 닫기 (웹앱 사용성 개선)
+        document.querySelectorAll('#main-nav a').forEach(item => {
+            item.addEventListener('click', () => {
+                const nav = document.getElementById('main-nav');
+                const ul = nav.querySelector('ul');
+                ul.classList.remove('open');
+            });
+        });
+    </script>
+
+</body>
+</html>
